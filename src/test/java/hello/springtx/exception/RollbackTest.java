@@ -10,6 +10,17 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.annotation.Transactional;
 
+
+/**
+ * 스프링 AOP의 예외 발생에 따른 트랜잭션 처리
+ * 런타임(언체크) 예외 -> 롤백
+ * 체크 예외 -> 커밋
+ *
+ * Q. 예외가 발생했는데 왜 커밋할까?
+ * A. 앱 운영 측면에서 발생하는 예외에는 시스템/ 비즈니스 예외가 있음
+ *    시스템 -> 복구 x, 롤백
+ *    비즈니스 -> 대안 o, 커밋(대기) -> 대안 제시
+ */
 @SpringBootTest
 public class RollbackTest {
 

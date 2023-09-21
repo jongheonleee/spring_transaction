@@ -37,7 +37,7 @@ class OrderServiceTest {
     }
 
     @Test
-    void runtimeException() throws NotEnoughMoneyException {
+    void runtimeException() {
         // given
         Order order = new Order();
         order.setUsername("예외");
