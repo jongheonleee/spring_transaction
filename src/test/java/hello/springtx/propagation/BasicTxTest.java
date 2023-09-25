@@ -1,4 +1,4 @@
-package hello.springtx.propogation;
+package hello.springtx.propagation;
 
 
 import lombok.extern.slf4j.Slf4j;
